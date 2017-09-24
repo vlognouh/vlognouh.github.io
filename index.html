@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+    <style type="text/css">
+    #editor {
+        max-height: 250px;
+        height: 250px;
+        background-color: white;
+        border-collapse: separate;
+        border: 1px solid rgb(204, 204, 204);
+        padding: 4px;
+        box-sizing: content-box;
+        -webkit-box-shadow: rgba(0, 0, 0, 0.0745098) 0px 1px 1px 0px inset;
+        box-shadow: rgba(0, 0, 0, 0.0745098) 0px 1px 1px 0px inset;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+        border-bottom-left-radius: 3px;
+        border-top-left-radius: 3px;
+        overflow: scroll;
+        outline: none;
+    }
+    /*    #editor {
+        height: 400px;
+        background-color: white;
+        border-collapse: separate;
+        border: 1px solid rgb(204, 204, 204);
+        padding: 4px;
+        box-sizing: content-box;
+        box-shadow: rgba(0, 0, 0, 0.075) 0px 1px 1px 0px inset;
+        border-radius: 3px;
+        overflow: scroll;
+        outline: none;
+    }*/
+    </style>
+</head>
+
+<body>
+    <div id="body" class="container">
+        <div class="page-header" contenteditable="true">
+            <h1>Example Page Header</h1>
+        </div>
+        <div class="column">
+            <div class="col-sm-2">dffd</div>
+            <div class="col-sm-10">
+                <div id=toolbar>
+                    <div class="btn-group">
+                        <div class="btn-group" title="Fonts" style="cursor: pointer;"><a class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)" title="Fonts">Font<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a tabindex="-1" href="javascript:void(0)">Sans serif</a></li>
+                                <li><a tabindex="-1" href="javascript:void(0)">Serif</a></li>
+                                <li><a tabindex="-1" href="javascript:void(0)">Wide</a></li>
+                                <li><a tabindex="-1" href="javascript:void(0)">Narrow</a></li>
+                                <li><a tabindex="-1" href="javascript:void(0)">Comic Sans MS</a></li>
+                                <li><a tabindex="-1" href="javascript:void(0)">Courier New</a></li>
+                                <li><a tabindex="-1" href="javascript:void(0)">Garamond</a></li>
+                                <li><a tabindex="-1" href="javascript:void(0)">Georgia</a></li>
+                                <li><a tabindex="-1" href="javascript:void(0)">Tahoma</a></li>
+                                <li><a tabindex="-1" href="javascript:void(0)">Trebuchet MS</a></li>
+                                <li><a tabindex="-1" href="javascript:void(0)">Verdana</a></li>
+                            </ul>
+                        </div>
+                        <div class="btn-group" title="Paragraph Format" style="cursor: pointer;"><a class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)" title="Paragraph Format">Formatting<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a tabindex="-1" href="javascript:void(0)">Heading 1</a></li>
+                                <li><a tabindex="-1" href="javascript:void(0)">Heading 2</a></li>
+                                <li><a tabindex="-1" href="javascript:void(0)">Heading 3</a></li>
+                                <li><a tabindex="-1" href="javascript:void(0)">Heading 4</a></li>
+                                <li><a tabindex="-1" href="javascript:void(0)">Heading 5</a></li>
+                                <li><a tabindex="-1" href="javascript:void(0)">Heading 6</a></li>
+                                <li><a tabindex="-1" href="javascript:void(0)">Paragraph</a></li>
+                            </ul>
+                        </div>
+                        <div class="btn-group" title="Font Size" style="cursor: pointer;"><a class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)" title="Font Size">Font size<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a tabindex="-1" href="javascript:void(0)">Small</a></li>
+                                <li><a tabindex="-1" href="javascript:void(0)">Normal</a></li>
+                                <li><a tabindex="-1" href="javascript:void(0)">Medium</a></li>
+                                <li><a tabindex="-1" href="javascript:void(0)">Large</a></li>
+                                <li><a tabindex="-1" href="javascript:void(0)">Huge</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="btn-group">
+                        <a href="javascript:void(0)" class="btn btn-default" title="Bold" style="cursor: pointer;">
+            		<i class="fa fa-bold"></i>
+            	</a>
+                        <a href="javascript:void(0)" class="btn btn-default" title="Italics" style="cursor: pointer;">
+            		<i class="fa fa-italic"></i>
+            	</a>
+                        <a href="javascript:void(0)" class="btn btn-default" title="Underline" style="cursor: pointer;">
+            		<i class="fa fa-underline"></i>
+            	</a>
+                        <a href="javascript:void(0)" class="btn btn-default" title="Text/Background Color" style="cursor: pointer;">
+            		<i class="fa fa-font"></i>
+           		</a>
+                        <a href="javascript:void(0)" class="btn btn-default" title="Text/Background Color" style="cursor: pointer;">
+            		<i class="material-icons" style="font-size: 12px;">cloud</i>
+           		</a>
+                    </div>
+                </div>
+                <div id=editor contenteditable="true">
+                </div>
+                <div class="wn-editor" contenteditable="true" style="height: 400px; background-color: white; border-collapse: separate; border: 1px solid rgb(204, 204, 204); padding: 4px; box-sizing: content-box; box-shadow: rgba(0, 0, 0, 0.075) 0px 1px 1px 0px inset; border-radius: 3px; overflow: scroll; outline: none;">#Write Something!
+                    <div>
+                        <br>
+                    </div>
+                    <div>```</div>
+                    <div>asdasd</div>
+                    <div>```</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
